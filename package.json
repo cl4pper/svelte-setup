@@ -6,7 +6,9 @@
   "scripts": {
     "build": "rollup -c",
     "app:dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public --host 0.0.0.0 --port 4000",
+    "app:up": "docker-compose up -d",
+    "app:down": "docker-compose down"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "sirv-cli": "^1.0.0"
   }
 }
